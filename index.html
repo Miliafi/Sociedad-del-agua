@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>H₂Q: La Sociedad del Agua | Archivo Clasificado</title>
+    <link rel="icon" href="assets/logoweb.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="mundo.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+
+    <div id="pdfModal" class="modal">
+        <div class="modal-content-base">
+            <div class="modal-header">
+                <div style="color:var(--neon); font-family:'Share Tech Mono'">DOC: ARTBOOK.PDF</div>
+                <span class="close-modal" id="closePdfModal">&times;</span>
+            </div>
+            <iframe src="assets/Artbook.pdf" class="pdf-viewer"></iframe>
+            <div class="mobile-fallback" style="display:none;">
+                <i class="fas fa-file-pdf fa-3x" style="color:var(--rust);"></i>
+                <h3 style="margin-top:20px;">PDF ENCRIPTADO PARA MÓVIL</h3>
+                <a href="assets/Artbook.pdf" target="_blank" class="nav-btn" style="margin-top:20px;">ABRIR EN NUEVA PESTAÑA</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="infoModal" class="modal">
+        <div class="modal-content-base">
+            <div class="modal-header">
+                <div style="color:#555; font-family:'Share Tech Mono'" id="modalHeaderTitle">EXPEDIENTE VISUAL</div>
+                <span class="close-modal" id="closeInfoModal">&times;</span>
+            </div>
+            <div class="modal-info-body">
+                <div class="modal-img-col" id="modalImgContainer">
+                    <div class="main-img-container">
+                        <img id="mainModalImg" src="" alt="Detalle">
+                    </div>
+                </div>
+                <div class="modal-text-col">
+                    <h2 id="modalTitle" class="modal-title-lg">TITULO</h2>
+                    <div class="modal-divider"></div>
+                    <p id="modalDesc" class="modal-desc">Descripción...</p>
+                    <div class="thumbnails-container" id="thumbContainer" style="display:none;">
+                        <div class="thumbnails-label">EVIDENCIA ADICIONAL:</div>
+                        <div class="thumbnails-strip" id="modalThumbnails"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="backToTop" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <a href="https://donmayoneso.github.io/ods6proGest/volver.html">
+                    <img src="assets/logoweb.png" alt="Logo" class="project-logo">
+                </a>
+                <a href="https://donmayoneso.github.io/ods6proGest/volver.html" class="nav-link return-link">
+                    <i class="fas fa-power-off"></i> [ VOLVER ]
+                </a>
+            </div>
+            <div class="header-right">
+                <button id="btnOpenPdf" class="nav-btn"><i class="fas fa-book"></i> ARTBOOK</button>
+                <button id="btnScrollCredits" class="nav-btn"><i class="fas fa-user-circle"></i> EQUIPO</button>
+            </div>
+        </header>
+
+        <div class="video-layout">
+            <div class="video-overlay">
+                <div class="glitch-title">SOCIEDAD DEL AGUA</div>
+                <div class="subtitle">PROYECTO H₂Q</div>
+            </div>
+            <video id="bgVideo" autoplay muted loop playsinline>
+                <source src="assets/Video mira.mov" type="video/mp4">
+                <source src="assets/Video mira.mov" type="video/quicktime">
+            </video>
+        </div>
+
+        <div class="title-row">
+            <div class="cyber-player">
+                <button id="btnPlay" class="cyber-btn"><i class="fas fa-play"></i></button>
+                <button id="btnReset" class="cyber-btn"><i class="fas fa-redo"></i></button>
+                <div style="font-family:'Share Tech Mono'; font-size:0.8rem; color:#888;">TRACK: SOCIEDAD DEL AGUA.MP3</div>
+                <div class="viz-container" id="visualizer">
+                    <div class="viz-bar"></div><div class="viz-bar"></div><div class="viz-bar"></div><div class="viz-bar"></div>
+                </div>
+            </div>
+            <audio id="mainAudio" loop>
+                <source src="assets/SOCIEDAD DEL AGUA.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <div class="story-section">
+            <span class="story-typing">INICIANDO PROTOCOLO DE ANÁLISIS...</span>
+            <div class="story-text">
+                <p>En un Quito futurista controlado por el <span class="story-highlight">Consejo Soberano</span>, el agua limpia es un privilegio monopolizado. La <span class="story-highlight">Sociedad del Agua</span> lucha en secreto para recuperarla.</p>
+                <br>
+                <p>Mira, una joven científica, descubre una quebrada subterránea bajo el Centro Histórico y, junto a Aya, se adentra en túneles vigilados para alcanzarla.</p>
+                <br>
+                <p>Tras una persecución intensa, logran encontrar un hilo de agua pura, pero Aya se sacrifica para que Mira pueda obtener una muestra.</p>
+                <br>
+                <p>Con su prototipo, ella purifica el agua y lleva la prueba al Panecillo, encendiendo la esperanza de la Sociedad. Ese acto desencadena el inicio de una revolución para devolver el agua a toda la ciudad.</p>
+            </div>
+        </div>
+
+        <div class="gallery-header" style="border:none;">
+            <span>/// SEÑAL_INTERCEPTADA: FRECUENCIA 104.5</span>
+            <span style="color:var(--rust); animation: pulse 1s infinite">EN VIVO</span>
+        </div>
+        <div class="intercepted-wrapper">
+            <div class="intercepted-header">
+                <span>FUENTE: CÁMARA SUBTERRÁNEA 04</span>
+                <span>ESTADO: GRABANDO</span>
+            </div>
+            <video class="video-intercepted" autoplay muted loop controls playsinline>
+                <source src="assets/Video Agua.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="gallery-header">
+            <span>/// BASE DE DATOS: VISUAL</span>
+            <span style="font-size:0.8rem; color:#666">ACCESO NIVEL 3</span>
+        </div>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item" data-title="MIRA" data-desc="ROL: Biofiltradora Desertora
+EDAD: 28 años
+
+Científica de campo experta en biofiltración. Creció en los distritos bajos de Quito. Desertó del Consejo Soberano llevando un prototipo de purificador portátil. Analítica, silenciosa y movida por la justicia." data-images="assets/Mira retrato.png,assets/Mira vertical.png,assets/Mira lab.gif">
+                <img src="assets/Mira retrato.png" alt="Mira">
+                <div class="item-overlay">
+                    <span class="item-type">SUJETO 01</span>
+                    <span class="item-name">MIRA</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-title="AYA" data-desc="ROL: Mensajero de los Túneles
+EDAD: 32 años
+
+Guía subterráneo y mensajero clandestino. Creció en los túneles subterráneos de Quito, aprendiendo rutas secretas. Astuto, leal y valiente. Sobrevivió escondido tras la captura de su familia." data-images="assets/Aya retrato.png,assets/Aya.png">
+                <img src="assets/Aya retrato.png" alt="Aya">
+                <div class="item-overlay">
+                    <span class="item-type">SUJETO 02</span>
+                    <span class="item-name">AYA</span>
+                </div>
+            </div>
+
+            <div class="gallery-item light-bg" data-title="CONSEJO SOBERANO" data-desc="ROL: Seguridad Militar
+EDAD PROM: 30 años
+
+Fuerza de seguridad estricta y calculadora. Su filosofía es el control absoluto de cada gota de agua. Vigilan la ciudad desde torres selladas, creyendo que el agua es demasiado peligrosa para el pueblo." data-images="assets/Miembro del consejo soberano.png" data-light="true">
+                <img src="assets/Miembro del consejo soberano.png" alt="Consejo">
+                <div class="item-overlay">
+                    <span class="item-type">ENEMIGO</span>
+                    <span class="item-name">CONSEJO</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-title="QUITO & QUEBRADA" data-desc="QUITO: Metrópolis marchita bajo un cielo gris permanente. Edificios coloniales y modernos en un paisaje desigual.
+
+QUEBRADA: Secreto mítico bajo el Centro Histórico. Una delgada vena de agua oculta tras túneles olvidados. Ambiente fresco y fantasmal." data-images="assets/Quito.png,assets/Quebrada Centro Historico.png">
+                <img src="assets/Quito.png" alt="Quito">
+                <div class="item-overlay">
+                    <span class="item-type">CONTEXTO</span>
+                    <span class="item-name">LA CIUDAD</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-title="CATACUMBAS" data-desc="UBICACIÓN: Bajo San Roque
+
+Laberinto oscuro de drenajes antiguos donde el aire es denso y metálico. Escondite de los rebeldes pero también una trampa mortal. Paredes marcadas por grietas y cables expuestos." data-images="assets/Catacumbas.png">
+                <img src="assets/Catacumbas.png" alt="Catacumbas">
+                <div class="item-overlay">
+                    <span class="item-type">ESCENARIO</span>
+                    <span class="item-name">CATACUMBAS</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-title="PANECILLO & LAB" data-desc="PANECILLO: Centinela oscuro sobre la ciudad. La estatua de la Virgen está erosionada. Punto de decisiones y revelaciones.
+
+LABORATORIO: Escondido en las profundidades. Espacio improvisado iluminado por tubos fluorescentes reciclados. Huele a ozono y humedad." data-images="assets/Panecillo.png,assets/Laboratorio.png">
+                <img src="assets/Panecillo.png" alt="Panecillo">
+                <div class="item-overlay">
+                    <span class="item-type">UBICACIONES CLAVE</span>
+                    <span class="item-name">PANECILLO / LAB</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="credits" class="credits-section">
+            <div style="font-family:'Share Tech Mono'; color:var(--rust); font-size:1.5rem; margin-bottom:40px;">
+                /// OPERADORES DEL SISTEMA
+            </div>
+            
+            <div class="team-container">
+                <div class="team-card">
+                    <div class="team-photo-wrapper"><img src="assets/Erika.jpg" alt="Erika"></div>
+                    <span class="team-role">PROGRAMADORA</span>
+                    <span class="team-name">ERIKA QUIJIJE</span>
+                    <a href="https://github.com/" target="_blank" class="profile-btn">PERFIL</a>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-photo-wrapper"><img src="assets/Steven.jpg" alt="Steven"></div>
+                    <span class="team-role">ANIMADOR</span>
+                    <span class="team-name">STEVEN PILA</span>
+                    <a href="https://github.com/" target="_blank" class="profile-btn">PERFIL</a>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-photo-wrapper"><img src="assets/Diddier.JPEG" alt="Diddier"></div>
+                    <span class="team-role">DISEÑADOR GRÁFICO</span>
+                    <span class="team-name">DIDDIER LOZADA</span>
+                    <a href="https://github.com/" target="_blank" class="profile-btn">PERFIL</a>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-photo-wrapper"><img src="assets/Juan.JPG" alt="Juan"></div>
+                    <span class="team-role">REDACTOR</span>
+                    <span class="team-name">JUAN RIVERA</span>
+                    <a href="https://github.com/" target="_blank" class="profile-btn">PERFIL</a>
+                </div>
+            </div>
+
+            <div style="margin-top:50px; color:#555; font-size:0.8rem;">
+                Carrera de Diseño Multimedia - Universidad Politécnica Salesiana © 2025
+            </div>
+        </div>
+    </div>
+
+    <script src="mundo.js"></script>
+</body>
+</html>
